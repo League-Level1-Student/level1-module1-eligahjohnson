@@ -11,6 +11,9 @@
  * 6. Make a Smurfette and print her name, hat color and girl or boy. 
  */
 
+
+Smurf 
+
 public class Smurf {
 
 	private String name;
