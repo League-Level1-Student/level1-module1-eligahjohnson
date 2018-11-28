@@ -1,6 +1,7 @@
 package extra;
 
-import java.awt.Window;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -8,7 +9,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class BinaryCode { 
+public class BinaryCode implements ActionListener{ 
 	JFrame code1 = new JFrame ("Covert 8 bits of binary to Asc11");
 	JPanel code2 = new JPanel ();
 	JTextField code3 = new JTextField(20);
@@ -22,7 +23,9 @@ public class BinaryCode {
 		
 		code2.add(code4);
 		code1.pack();
-		code4.addMouseListener(null);
+		code4.addActionListener(this);
+		
+		
 		
 		
 	}
@@ -53,6 +56,13 @@ public class BinaryCode {
 	
 	
 	
+		
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
 		
 	}
 	
