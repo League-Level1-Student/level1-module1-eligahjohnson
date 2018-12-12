@@ -1,10 +1,12 @@
 package extra;
 
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -14,7 +16,7 @@ public class BinaryCode implements ActionListener{
 	JPanel code2 = new JPanel ();
 	JTextField code3 = new JTextField(20);
 	JButton code4 = new JButton () ;
-	
+	JLabel code5 = new JLabel ();
 	BinaryCode(){
 		code1.setVisible(true);
 		code1.add(code2);
@@ -24,7 +26,7 @@ public class BinaryCode implements ActionListener{
 		code2.add(code4);
 		code1.pack();
 		code4.addActionListener(this);
-		
+		code2.add(code5);
 		
 		
 		
@@ -55,7 +57,6 @@ public class BinaryCode implements ActionListener{
 	
 	
 	
-	
 		
 	}
 
@@ -63,7 +64,12 @@ public class BinaryCode implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		
+	String eligah = code3.getText();
+	String convert = convert(eligah); 
+	JOptionPane.showMessageDialog(null, convert);
+	
+	code5.setText(convert);
+	code1.pack();
 	}
 	
 
